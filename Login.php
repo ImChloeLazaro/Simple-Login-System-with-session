@@ -15,7 +15,7 @@ if (isset($_POST['login'])) {
                 $_SESSION['name'] = $row['name'];
                 $_SESSION['pass'] = $row['pass'];
                 $_SESSION['status'] = true;
-                header("location:home.php");
+                header("location:home.php?success=". true);
             }
             ?>
             <script>
@@ -25,17 +25,10 @@ if (isset($_POST['login'])) {
         }
     } else {
         ?>
-<<<<<<< HEAD
         <script>
             alert('No data!')
         </script>
 
-=======
-
-            <script>
-                alert('No data!');
-            </script>
->>>>>>> 2da7f8a843614f2cdbc5f217a5b265a68ad0d976
         <?php
     }
 }
