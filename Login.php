@@ -1,5 +1,6 @@
 <?php
 require "./conf.php";
+require "./includes.php";
 session_start();
 if (isset($_POST['login'])) {
     $name = $_POST['name'];
@@ -16,13 +17,20 @@ if (isset($_POST['login'])) {
                 $_SESSION['pass'] = $row['pass'];
                 $_SESSION['status'] = true;
                 header("location:home.php?success=". true);
+                exit;
             }
-            ?>
+            
+        }
+        ?>
             <script>
-                alert('Username or password is wrong')
+                alert('INVALID USERNAME AND PASSWORD')
+                Swal.fire(
+                    'An Error Occured',
+                    'INVALID USERNAME AND PASSWORD',
+                    'error'
+                    )
             </script>
             <?php
-        }
     } else {
         ?>
         <script>
