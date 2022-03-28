@@ -17,10 +17,26 @@ if (isset($_POST['login'])) {
                 $_SESSION['status'] = true;
                 header("location:home.php");
             }
-            echo "<script>alert('Username or password is wrong')</script>";
+            ?>
+            <script>
+                alert('Username or password is wrong')
+            </script>
+            <?php
         }
     } else {
-        echo "<script>alert('No data!')</script>";
+        ?>
+<<<<<<< HEAD
+        <script>
+            alert('No data!')
+        </script>
+
+=======
+
+            <script>
+                alert('No data!');
+            </script>
+>>>>>>> 2da7f8a843614f2cdbc5f217a5b265a68ad0d976
+        <?php
     }
 }
 
