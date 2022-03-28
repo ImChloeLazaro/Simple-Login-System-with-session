@@ -1,5 +1,5 @@
 <?php session_start();
-
+include "./includes.php";
 if ($_SESSION['status'] != true) {
     header("location: login.php");
 }
@@ -20,3 +20,20 @@ if ($_SESSION['status'] != true) {
 </body>
 
 </html>
+
+<?php 
+if(isset($_GET['success']))
+{
+?>
+<script>
+    Swal.fire(
+    'Success',
+    'Log in',
+    'success'
+)
+</script>
+<?php  
+
+}
+?>
+
