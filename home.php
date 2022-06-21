@@ -1,3 +1,4 @@
+<!--  -->
 <?php session_start();
 include "./includes.php";
 if ($_SESSION['status'] != true) {
